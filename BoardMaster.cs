@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace Mission3
 
         public static char? IsWinner(char[] board)
         {
+            List<char> numList = new() { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             //Check for horizontal winners
             if (board[0] == board[1] && board[1] == board[2])
             {
@@ -54,9 +56,11 @@ namespace Mission3
             {
                 return board[2];
             }
+            if (Array.Find(board, x => numList.Contains(x)) == '\0')
+            {
+                return 'C';
+            }
             return null;
         }
-
-        //new char[9] {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
     }
 }
