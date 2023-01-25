@@ -6,7 +6,8 @@ namespace Mission3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Driver game = new Driver();
+            game.StartGame();
         }
     }
 }
