@@ -11,11 +11,11 @@ namespace Mission3
     {
         public static void PrintBoard(char[] board)
         {
-            Console.WriteLine($"  {board[0]}  | {board[1]}  | {board[2]}  ");
+            Console.WriteLine($"  {board[0]}  | {board[1]}   | {board[2]}  ");
             Console.WriteLine($"_____|_____|_____");
-            Console.WriteLine($"  {board[3]}  |  {board[4]} |  {board[5]} ");
+            Console.WriteLine($"  {board[3]}  |  {board[4]}  |  {board[5]} ");
             Console.WriteLine($"_____|_____|_____");
-            Console.WriteLine($"  {board[6]}  |  {board[7]} |  {board[8]} ");
+            Console.WriteLine($"  {board[6]}  |  {board[7]}  |  {board[8]} ");
         }
 
         public static char? IsWinner(char[] board)
